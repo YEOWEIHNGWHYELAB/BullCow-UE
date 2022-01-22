@@ -58,9 +58,8 @@ void UBullCowCartridge::SetupGame()
     PrintLine(TEXT("Guess the %i letter word!"), HiddenWord.Len()); // .len() prints out the length of the string. 
     PrintLine(TEXT("You have %i lives."), Lives);
     PrintLine(TEXT("Type in your guess and \npress enter to continue...")); // Prompt Player For Guess.
-    PrintLine(TEXT("The HiddenWord is: %s."), *HiddenWord); // Debug Line to display the hidden word. 
-    PrintLine(TEXT("Yah I given you the answer are you not happy?"));
-    PrintLine(TEXT("Nice Cow Sex btw..."));
+    // PrintLine(TEXT("The HiddenWord is: %s."), *HiddenWord); // Debug Line to display the hidden word. 
+    // PrintLine(TEXT("Yah I given you the answer are you not happy?"));
 }
 
 void UBullCowCartridge::EndGame()
@@ -82,7 +81,7 @@ void UBullCowCartridge::ProcessGuess(const FString& Guess)
     {
         PrintLine(TEXT("The hidden word is %i letters long."), HiddenWord.Len());
         PrintLine(TEXT("Sorry, try guessing again! \nYou have %i lives remaining."), Lives);
-        return;
+        // return;
     }
 
     // Check If Isogram
@@ -90,7 +89,7 @@ void UBullCowCartridge::ProcessGuess(const FString& Guess)
     {
         /* code */
         PrintLine(TEXT("No repeating letters, guess again!"));
-        return;
+        // return;
     }
 
     // Remove Life
